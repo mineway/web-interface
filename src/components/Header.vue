@@ -5,11 +5,9 @@
   >
   </modal>
   <header class="header">
-    <h1 class="logo">
-      <router-link tag="a" to="/">
-        <img src="../assets/logo.svg" alt="Mineway">
-      </router-link>
-    </h1>
+    <router-link tag="h1" to="/" class="logo">
+      <img src="../assets/logo.svg" alt="Mineway">
+    </router-link>
     <nav class="header__nav">
       <router-link
           tag="a"
@@ -91,19 +89,33 @@ export default {
   background-color: var(--main-color);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid var(--main-color-dark-2);
-  padding: var(--spacing-little);
   display: flex;
   align-items: center;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 3rem;
-  padding: var(--spacing-little);
+  background-color: var(--info-color);
+  height: 61px;
+  width: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo:hover {
+  transition: background-color 500ms ease-in;
+  background-color: var(--info-color-dark-1);
+}
+
+.logo:active {
+  transition: background-color 0s;
+  background-color: var(--info-color-dark-2);
 }
 
 .logo img {
-  width: 50px;
+  width: 25px;
 }
 
 .header__nav {
