@@ -1,9 +1,7 @@
 <template>
   <div class="dashboard">
     <main class="dashboard__main">
-      <Block title="Worker Status">
-        fewwfefwe
-      </Block>
+      <WorkerStatus />
       <StockExchange />
     </main>
     <aside class="dashboard__aside">
@@ -19,9 +17,10 @@
 
 <script>
 import StockExchange from "../components/StockExchange";
+import WorkerStatus from "../components/WorkerStatus";
 export default {
   name: "Dashboard",
-  components: {StockExchange}
+  components: {WorkerStatus, StockExchange}
 }
 </script>
 

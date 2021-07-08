@@ -4,11 +4,12 @@
       <p><font-awesome-icon v-if="icon" :icon="icon" /> {{ title }}</p>
       <span v-if="rightData">{{ rightData }}</span>
     </h3>
-    <div class="block__content" :class="noPadding ? 'block__content--no-padding' : ''">
+    <div v-if="!noBody" class="block__content" :class="noPadding ? 'block__content--no-padding' : ''">
       <loading :is="loading">
         <slot />
       </loading>
     </div>
+    <slot v-else />
   </div>
 </template>
 
@@ -28,6 +29,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    noBody: {
+      type: Boolean,
+      default: false,
+    },
     rightData: {
       type: String,
       default: undefined,
@@ -35,7 +40,7 @@ export default {
     loading: {
       type: Boolean,
       default: false,
-    }
+    },
   }
 }
 </script>

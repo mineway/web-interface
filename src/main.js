@@ -1,10 +1,17 @@
+// Core
 import { createApp } from 'vue'
-import App from './App.vue'
+
+// Libs
 import VTooltip from 'v-tooltip'
-import Router from "./router"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCog, faPlus, faStopwatch, faDonate, faBolt, faDollarSign, faSignOutAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VeProgress from 'vue-ellipse-progress'
+import HighCharts from 'highcharts-vue'
+
+// Apps
+import App from './App.vue'
+import Router from "./router"
 import IconBtn from "./components/IconBtn";
 import Btn from "./components/Btn";
 import Modal from "./components/Modal";
@@ -14,6 +21,7 @@ import Loading from "./components/Loading";
 
 library.add(faCog, faPlus, faStopwatch, faDonate, faBolt, faDollarSign, faSignOutAlt, faTimes)
 
+// Assets
 import 'v-tooltip/dist/v-tooltip.css'
 import "./assets/css/main.css"
 
@@ -29,4 +37,6 @@ createApp(App)
     .use(VTooltip, {
         defaultHtml: false,
     })
+    .use(VeProgress)
+    .use(HighCharts)
     .mount('#app')
