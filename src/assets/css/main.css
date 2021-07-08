@@ -30,13 +30,14 @@
     --text-color-active: #000;
     --text-color-placeholder: #bcc8ce;
     /* Third Color */
-    --neutral-color-light-3: #AFD6FD;
-    --neutral-color-light-2: #88C2FC;
-    --neutral-color-light-1: #60ADFB;
-    --neutral-color: #2891F9;
-    --neutral-color-dark-1: #1085F9;
-    --neutral-color-dark-2: #0670DB;
-    --neutral-color-dark-3: #055CB3;
+    --neutral-color-light-2: #F8B577;
+    --neutral-color-light-1: #F6A051;
+    --neutral-color: #F3841E;
+    --neutral-color-dark-1: #E9770C;
+    --neutral-color-dark-2: #C2630A;
+    --neutral-color-bg: rgba(243, 132, 30, 0.05);
+    --neutral-color-bg-hover: rgba(243, 132, 30, 0.1);
+    --neutral-color-bg-active: rgba(243, 132, 30, 0.15);
     /* Default Color */
     --default-color-light-2: #f6f7fa;
     --default-color-light-1: #eeeff2;
@@ -55,15 +56,6 @@
     --warning-color: #a7082a;
     --warning-color-dark-1: #580416;
     --warning-color-dark-2: #31020c;
-    /* Info Color */
-    --info-color-light-2: #F8B577;
-    --info-color-light-1: #F6A051;
-    --info-color: #F3841E;
-    --info-color-dark-1: #E9770C;
-    --info-color-dark-2: #C2630A;
-    --info-color-bg: rgba(243, 132, 30, 0.05);
-    --info-color-bg-hover: rgba(243, 132, 30, 0.1);
-    --info-color-bg-active: rgba(243, 132, 30, 0.15);
 }
 
 .btn--template {
@@ -100,16 +92,16 @@
 }
 
 .btn--info {
-    color: var(--info-color);
-    background-color: var(--info-color-bg);
+    color: var(--neutral-color);
+    background-color: var(--neutral-color-bg);
 }
 
 .btn--info:hover {
-    background-color: var(--info-color-bg-hover);
+    background-color: var(--neutral-color-bg-hover);
 }
 
 .btn--info:active {
-    background-color: var(--info-color-bg-active);
+    background-color: var(--neutral-color-bg-active);
 }
 
 .btn--bold {

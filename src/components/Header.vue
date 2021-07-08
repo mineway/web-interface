@@ -29,15 +29,7 @@
           Donate
         </btn>
       </a>
-      <router-link
-          tag="a"
-          class="icon-nav__link"
-          to=""
-          exact
-          v-tooltip.bottom-start="'Add worker'"
-        >
-        <icon-btn icon="plus" />
-      </router-link>
+      <AddWorker />
       <router-link
           class="icon-nav__link"
           to=""
@@ -67,8 +59,13 @@
 </template>
 
 <script>
+import AddWorker from "./AddWorker";
+
 export default {
   name: "Header",
+  components: {
+    AddWorker
+  },
   data() {
     return {
       nav: [
@@ -94,7 +91,7 @@ export default {
 }
 
 .logo {
-  background-color: var(--info-color);
+  background-color: var(--neutral-color);
   height: 61px;
   width: 61px;
   display: flex;
@@ -102,16 +99,17 @@ export default {
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  padding: var(--spacing-little);
 }
 
 .logo:hover {
   transition: background-color 500ms ease-in;
-  background-color: var(--info-color-dark-1);
+  background-color: var(--neutral-color-dark-1);
 }
 
 .logo:active {
   transition: background-color 0s;
-  background-color: var(--info-color-dark-2);
+  background-color: var(--neutral-color-dark-2);
 }
 
 .logo img {

@@ -28,4 +28,22 @@ body {
   padding: 0 var(--spacing-medium);
   margin: var(--spacing-medium) auto;
 }
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 50px;
+  background-color: #dadce0;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: inherit;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+  border: none;
+}
 </style>

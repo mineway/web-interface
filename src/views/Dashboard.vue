@@ -2,11 +2,9 @@
   <div class="dashboard">
     <main class="dashboard__main">
       <Block title="Worker Status">
-        toto
+        fewwfefwe
       </Block>
-      <Block title="Stock Exchange">
-        toto
-      </Block>
+      <StockExchange />
     </main>
     <aside class="dashboard__aside">
       <Block title="Daily Earnings" icon="dollar-sign">
@@ -20,8 +18,10 @@
 </template>
 
 <script>
+import StockExchange from "../components/StockExchange";
 export default {
-  name: "Dashboard"
+  name: "Dashboard",
+  components: {StockExchange}
 }
 </script>
 
